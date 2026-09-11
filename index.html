@@ -7,7 +7,7 @@
     /* Change repeat(5, 1fr) to match your grid width */
     #grid { 
       display: grid; 
-      grid-template-columns: repeat(11, 1fr); 
+      grid-template-columns: repeat(9, 1fr); 
       gap: 1px; 
       background: #000; 
       width: 100%; 
@@ -33,7 +33,7 @@
 <body>
 
 <div class="title">
-  תשבצון ההגיון של רון
+  תשבצון ההגיון של רון 2
 </div>
 
 <div id="grid"></div>
@@ -42,70 +42,80 @@
   <div>
     <strong>רמזים</strong>
     <p>
-    1 מאוזן.
-    ההונאה העילגת נוטה לשרוץ בעצים
-    (5)
+    1.
+    אוסף מס לכיוון האנכי
+    (4)
     </p>
     
     <p>
-    1 מאונך.
-    עף גבוה, נשק חם קטן קריר וטעים
-    (5)
-    </p>
-
-    <p>
     2.
-    חזר מכלוב בחווה בזחילה
-    (5)
+    כלי נגינה שצריך להביס
+    (3)
     </p>
 
     <p>
     3.
-    אות שגויה אך עושה מעשים טובים
+    חלק קטן ממילה שיוצר את המחשבים של העמק
     (4)
     </p>
 
     <p>
-    4 מאוזן.
-    הגר פתחה אכסנייה
-    (8)
-    </p>
-
-    <p>
-    4 מאונך.
-    לא אסכים לקטניה על קרם אוורירי!
-    (6)
-    </p>
-
-    <p>
-    5.
-    הזמר המפורסם מת מבולבל, בגלל כמות קטנה מאוד של בייקון.
+    4.
+    אין לי מושג איך לסדר בנים שגנבתי
     (4, ואז 6)
     </p>
 
     <p>
-    6 מאוזן.
-    תחרות החרבות בין הצמחייה - הו, כמה תשוקה
-    (8, אנגלית)
+    5.
+    לקח מטפחת גדולה והחזיר
+    (8)
     </p>
-    
+
     <p>
-    6 מאונך.
-    לא פה דנתי, תדייק!
-    (5, נשמע כמו)
+    6.
+    הפגנת על אוכל תינוקות
+    (4)
     </p>
 
     <p>
     7.
-    הגיע לאיראן וחזר על עקבותיו
+    קל לשפוך את גיא מהבקבוק
     (4)
     </p>
 
     <p>
     8.
-    כבר לא מצייר על המדרכה
+    פיל שמתחכם על ההגדרה של תיבול
+    (6)
+    </p>
+    
+    <p>
+    9 מאוזן.
+    הפנס האלוהי הפסיק לעבוד
+    (5)
+    </p>
+
+    <p>
+    9 מאונך.
+    נושף כמו דוב
+    (2)
+    </p>
+
+    <p>
+    10.
+    נעים לשוטט איתו
+    (6)
+    </p>
+
+    <p>
+    11.
+    חתול שהפך לחומר בידוד
     (4)
     </p>
+    <br>
+    
+
+    [קרדיט להילה על 6]
 
   </div>
 </div>
@@ -113,20 +123,19 @@
 <script>
   // 1 = White cell, 0 = Black cell
   const layout = (
-    "01111100000" +
-    "00000100000" +
-    "01011111000" +
-    "01000100000" +
-    "11111111000" +
-    "01010001000" +
-    "00010001000" +
-    "00010001000" +
-    "00010001000" +
-    "01111111100" +
-    "00010100100" +
-    "00010100100" +
-    "00010100100" +
-    "00010001111"
+    "010001000" +
+    "010111100" +
+    "011101000" +
+    "000101000" +
+    "000100000" +
+    "111100000" +
+    "000100000" +
+    "010100100" +
+    "111110100" +
+    "010111111" +
+    "010100100" +
+    "010000000" +
+    "011110000"
   ).split('').map(Number)
 
   const board = document.getElementById('grid');
@@ -137,14 +146,17 @@
     
     if (val) {
       // Example: Add number 1 to the first cell
-      if (i === 5) div.innerHTML = '<span class="num">1</span>'; // double
-      if (i === 11*2 + 7) div.innerHTML = '<span class="num">2</span>';
-      if (i === 11*2 + 1) div.innerHTML = '<span class="num">3</span>';
-      if (i === 11*4 + 7) div.innerHTML = '<span class="num">4</span>'; // double
-      if (i === 11*4 + 3) div.innerHTML = '<span class="num">5</span>';
-      if (i === 11*9 + 8) div.innerHTML = '<span class="num">6</span>'; // double
-      if (i === 11*9 + 5) div.innerHTML = '<span class="num">7</span>';
-      if (i === 11*13 + 10) div.innerHTML = '<span class="num">8</span>';
+      if (i === 9*0 + 5) div.innerHTML = '<span class="num">1</span>'; // double
+      if (i === 9*0 + 1) div.innerHTML = '<span class="num">2</span>';
+      if (i === 9*1 + 6) div.innerHTML = '<span class="num">3</span>';
+      if (i === 9*1 + 3) div.innerHTML = '<span class="num">4</span>'; // double
+      if (i === 9*2 + 3) div.innerHTML = '<span class="num">5</span>';
+      if (i === 9*5 + 3) div.innerHTML = '<span class="num">6</span>'; // double
+      if (i === 9*7 + 6) div.innerHTML = '<span class="num">7</span>';
+      if (i === 9*7 + 1) div.innerHTML = '<span class="num">8</span>';
+      if (i === 9*8 + 4) div.innerHTML = '<span class="num">9</span>';
+      if (i === 9*9 + 8) div.innerHTML = '<span class="num">10</span>';
+      if (i === 9*12 + 4) div.innerHTML = '<span class="num">11</span>';
       
       const input = document.createElement('input');
       input.maxLength = 1;
